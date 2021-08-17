@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from django.models import Article
 
-# Create your views here.
+class ArticleListView(ListView):
+    """List View for Article Model"""
+    model = Article
+    template_name = 'home.html'
+
